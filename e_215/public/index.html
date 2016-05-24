@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>215. Ajax via 'a' element.</title>
+    <style media="screen">
+      .result {
+        margin-top: 20px;
+        width: 400px;
+        border: 1px solid black;
+      }
+      #data {
+        color: red;
+      }
+    </style>
+    <script src="jquery-1.12.4.min.js" charset="utf-8"></script>
+  </head>
+  <body>
+    <a id="linkBtn" href="/getInfo">This link will work half of the time.</a>
+    <div class="result">
+      <span>Got data from the server:</span>
+      <span id="data"></span>
+    </div>
+    <script type="text/javascript">
+      var data = $('#data');
+      var btn = $('#linkBtn').click(function(evt) {
+        evt.preventDefault();
+        $.get(btn.attr('href')).done(function(input) {
+          data.text(input);
+        }).fail(function(input) {
+          window.location = input.responseJSON.redirect;
+        });
+      });
+    </script>
+  </body>
+</html>

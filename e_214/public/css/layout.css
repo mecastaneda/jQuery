@@ -1,0 +1,78 @@
+body {
+  margin: 0;
+}
+
+.pTable {
+  border-spacing: 0;
+  border-collapse: collapse;
+  border: 1px solid black;
+  margin: 10px;
+}
+.pTable img {
+  width: 100px;
+  height: 100px;
+}
+.pTable, th, td {
+  border: 1px solid black;
+  padding: 5px;
+}
+
+.form-target {
+  display: none;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 50;
+}
+
+.form-target.show {
+  display: block;
+}
+
+.edit-form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  padding: 10px;
+  width: 400px;
+  background-color: rgb(150, 213, 142);
+  margin: 0 auto;
+  z-index: 100;
+}
+
+.edit-form > .form-input {
+  margin-bottom: 10px;
+}
+
+.edit-form > .form-input > label {
+  width: 100%;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.edit-form > .form-input > input {
+  width: 100%;
+}
+
+.edit-form > .btns-container {
+  height: 25px;
+}
+
+.edit-form > .btns-container > button {
+  float: right;
+  margin-left: 10px;
+  height: 25px;
+  padding: 0 5px;
+}
+
+.edit-form > .form-input > .error {
+  display: none;
+  color: red;
+}
+.edit-form > .form-input > .error.show {
+  display: block;
+}

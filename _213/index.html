@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>213. Input attribute selector</title>
+    <script src="jquery-1.12.4.min.js" charset="utf-8"></script>
+    <style media="screen">
+      .container {
+        width: 300px;
+        border: 1px solid black;
+        padding: 10px;
+      }
+      .result {
+        margin-top: 10px;
+        width: 300px;
+        border: 1px solid black;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      Ted <input type="text" name="Ted" value=""><br>
+      Fred <input type="text" name="Fred" value=""><br>
+      John <input type="text" name="John" value="">
+    </div>
+    <div class="result">
+      input[name="Fred"].value: <span id="output"></span>
+    </div>
+    <script type="text/javascript">
+      var fredInput = $('input[name="Fred"]');
+      var output = $('#output');
+      fredInput.on('input', function(evt) {
+        output.prop('innerText', fredInput.prop('value'));
+      });
+    </script>
+  </body>
+</html>

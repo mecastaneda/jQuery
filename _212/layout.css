@@ -1,0 +1,35 @@
+body {
+  width: 600px;
+  margin: 0 auto;
+}
+
+header {
+  background-color: rgb(96, 219, 120);
+  position: relative;
+  height: 100px;
+}
+header > nav {
+  height: 20px;
+  position: absolute;
+  top: 80px;
+  background-color: rgba(255, 255, 255, 0.2);
+  width: 100%;
+}
+header > nav > a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #FFF;
+}
+header > nav > a:visited {
+  color: #FFF;
+}
+
+.main {
+  background-color: rgb(230, 214, 195);
+  min-height: 80vh;
+  padding: 20px;
+}
+
+.main > section {
+  display: none;
+}
